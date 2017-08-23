@@ -1,3 +1,45 @@
-<h1>
-  {{title}}
-</h1>
+<div class="row columns">
+	<!--<button (click)="loginWithFacebook()" *ngIf="!name">Login With Facebook</button>
+	<button (click)="loginWithGoogle()" *ngIf="!name">Login With Google</button>
+
+	<button (click)="logout()" *ngIf="(name | async)">Logout</button>
+
+
+
+	<input type="text" id="message" *ngIf="name" placeholder="Chat here..." (keyup.enter)="chatSend($event.target.value)" [(ngModel)]="msgVal" />
+
+	<div class="chat-container" *ngFor="let item of items | async">
+		<a href="#">{{item.name}}</a>
+
+		<p>{{item.messag}}</p> -->
+		
+		<div class="small-6 columns">
+		<button (click)="login()" *ngIf="!(user | async)?.uid">Anonymous Login</button>
+		</div>
+
+		<div class="small-6 columns">
+		<button (click)="loginWithGoogle()" *ngIf="!(user | async)?.uid">Login With Google</button>
+		</div>
+		<div class="small-6 columns">
+  		<button (click)="logout()" *ngIf="(user | async)?.uid">Logout</button>
+  		</div>
+
+ 		 <input type="text" id="message" *ngIf="(user | async)?.uid" placeholder="What is it that you do?" (keyup.enter)="Send($event.target.value)" [(ngModel)]="msgVal" />
+
+
+  		<div class="chat-container">
+
+      		<p *ngFor="let item of items | async">{{item.message}}</p>
+
+		</div> 
+
+
+  	<!--
+	<div class="chat-container" *ngFor="let item of items | async">
+		<a href="#">{{item.name}}</a>
+
+		<p>{{item.messag}}</p>
+
+	</div>-->
+
+</div>

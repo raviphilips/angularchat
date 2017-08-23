@@ -1,0 +1,14 @@
+change log for angularfire2 v4
+
+https://github.com/angular/angularfire2/blob/master/docs/version-4-upgrade.md
+
+https://github.com/angular/angularfire2/issues/854
+
+
+https://github.com/angular/angularfire2/issues/938
+
+
+=======================================================
+
+
+
